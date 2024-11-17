@@ -1,0 +1,13 @@
+- hosts: nginx-servers
+  become:
+    true
+  become_method:
+    su
+  become_user:
+    root
+  remote_user:
+    ansible
+  roles:
+   - nginx
+   vars:
+     nginx_user: nginx

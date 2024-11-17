@@ -1,0 +1,12 @@
+- name: Replace nginx.conf
+  template:
+    src=templates/nginx.conf
+    dest=/etc/nginx/nginx.conf
+- name Replace mime.types
+  template:
+    src=templates/mime.types
+    dest=/etc/nginx/mime.types  
+- name: copy test_page
+  template:
+    src=/templates/static/test_page.html
+    dest=/usr/share/nginx/html/*
